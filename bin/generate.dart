@@ -174,12 +174,12 @@ Future _writeKeys(StringBuffer classBuilder, List<FileSystemEntity> files,
     bool? skipUnnecessaryKeys) async {
   var file = '''
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
-import 'package:easy_localization/easy_localization.dart';
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 
-
 class LocaleKeys extends InheritedWidget {
- const LocaleKeys({Key? key, required Widget child})
+  const LocaleKeys({Key? key, required Widget child})
       : super(
           key: key,
           child: child,
