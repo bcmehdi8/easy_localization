@@ -180,7 +180,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class LocaleKeys extends InheritedWidget {
-  const LocaleKeys({Key? key, required Widget child})
+  LocaleKeys({Key? key, required Widget child})
       : super(
           key: key,
           child: child,
