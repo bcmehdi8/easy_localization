@@ -176,6 +176,7 @@ Future _writeKeys(StringBuffer classBuilder, List<FileSystemEntity> files,
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 // ignore_for_file: constant_identifier_names, non_constant_identifier_names
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class LocaleKeys extends InheritedWidget {
@@ -235,9 +236,9 @@ String _resolve(Map<String, dynamic> translations, bool? skipUnnecessaryKeys,
     if (!_preservedKeywords.contains(key)) {
       accKey != null && !ignoreKey
           ? fileContent +=
-              '  final ${accKey.replaceAll('.', '_')}_$key = \'$accKey.$key\';\n'
+              '  static const ${accKey.replaceAll('.', '_')}_$key = \'$accKey.$key\';\n'
           : !ignoreKey
-              ? fileContent += '  final $key = \'$key\';\n'
+              ? fileContent += '  final $key = \'$key\'.tr();\n'
               : null;
     }
   }
