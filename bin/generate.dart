@@ -236,9 +236,9 @@ String _resolve(Map<String, dynamic> translations, bool? skipUnnecessaryKeys,
     if (!_preservedKeywords.contains(key)) {
       accKey != null && !ignoreKey
           ? fileContent +=
-              '  static const ${accKey.replaceAll('.', '_')}_$key = \'$accKey.$key\';\n'
+              '  final ${accKey.replaceAll('.', '_')}_$key = \'$accKey.$key\';\n'
           : !ignoreKey
-              ? fileContent += '  static const $key = \'$key\';\n'
+              ? fileContent += '  final $key = \'$key\';\n'
               : null;
     }
   }
